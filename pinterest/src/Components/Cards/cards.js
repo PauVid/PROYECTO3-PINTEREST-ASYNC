@@ -1,11 +1,8 @@
 import "./cards.css"
 
-export const cards = (texto, bgColor) => {
-  return `
-  <div>
-  <div class="card-image">
-    <img src="">
-  </div>
-  </div>
-  `;
-};
+export function cards() {
+  const body = document.querySelector("#app");
+
+  
+
+}
