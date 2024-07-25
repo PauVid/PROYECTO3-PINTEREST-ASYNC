@@ -1,7 +1,7 @@
-import './style.css'
-import { cards } from './src/Components/Cards/cards'
+import './style.css';
 import { header } from './src/Components/Header/header';
+import { cards } from './src/Components/Cards/cards';
 
-const app = document.querySelector("#app");
 
-header()
+header();
+cards("cat")

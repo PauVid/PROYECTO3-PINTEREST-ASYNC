@@ -4,3 +4,30 @@
     background-color: #ffd17b;
     padding: 5px 10px;
 }
+
+.gallery {
+    padding: 30px;
+}
+
+.gallery-track {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-flow: dense;
+}
+
+.gallery-track > .card {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+}
+
+.gallery-track > .card > img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}

@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media (max-width: 600px) {
+
+    .options-container,
+    .logos-container {
+        display: none !important;
+    }
+
+    .menu-hamburger {
+        display: block !important;
+    }
+
+    .gallery-track {
+        grid-template-columns: repeat(auto-fill, 160px) !important;
+    }
+
+    .home-header {
+        width: 90% !important;
+    }
+
+}
