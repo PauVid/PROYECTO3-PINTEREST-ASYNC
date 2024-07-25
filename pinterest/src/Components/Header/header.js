@@ -55,35 +55,31 @@ export function header() {
             logosContainer.append(logoImg);
         }
 
-        // const hamburgerLogo = [
-        //   { 
-        //     image: "/assets/menu.svg", 
-        //     name: "menu" 
-        //   },
-        // ];
-        
         const hamburger = document.createElement("img");
         hamburger.src = "/assets/menu.svg";
         hamburger.classList.add("menu-hamburger");
         hamburger.addEventListener("click", () => {
-          console.log("clicado")
           const menuShow = document.querySelector(".menu-container");
-          menuShow.classList.add("visible");
-          menuShow.classList.remove("hidden");
-          if(menuShow.classList.contains("visible")) {
-            menuShow.classList.add("hidden");
-            menuShow.classList.remove("visible");
+          menuShow.classList.toggle("hidden");
+          hamburger.classList.toggle("menu-hamburger-open");
+          
+          if(hamburger.classList.contains("menu-hamburger-open")){
+            hamburger.src = "/assets/close.svg";
+          } else {
+            hamburger.src = "/assets/menu.svg";
           }
         })
 
         const menu = document.createElement("div");
         menu.classList.add("menu-container", "hidden");
         menu.innerHTML = `
-        <ul>
-        <li>Option 1</li>
-        <li>Option 2</li>
-        <li>Option 3</li>
-        </ul>
+        <div class="inner-menu">
+          <a src="#">Explorar</a>
+          <a src="#">Crear</a>
+          <a src="#">Inicio</a>
+          <a src="#">Mi cuenta</a>
+          <a src="#">Favoritos</a>
+        </div>
         `;
 
         const searchContainer = document.createElement("div");

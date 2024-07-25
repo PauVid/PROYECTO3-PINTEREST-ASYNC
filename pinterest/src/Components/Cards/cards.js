@@ -30,10 +30,22 @@ export function cards(query) {
       const galleryCard = document.createElement("div");
       galleryCard.className = "card";
 
+      const cardElements = document.createElement("div");
+      cardElements.classList.add("card-elements");
+      cardElements.innerHTML = `
+      <div class="card-elements-top">
+        <img class="cam-btn" src="./public/assets/cam.svg">
+        <img class="fav-btn" src="./public/assets/fav.svg">
+      </div>
+      <div class="card-elements-bottom">
+        <img class="user-btn" src="./public/assets/user.png">
+      </div>
+      `
+
       const image = document.createElement('img');
       image.src = imageData.urls.thumb;
 
-      galleryCard.append(image);
+      galleryCard.append(image, cardElements);
       galleryTrack.append(galleryCard);
     });
 
