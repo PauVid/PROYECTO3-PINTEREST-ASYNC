@@ -13,7 +13,13 @@ export function header() {
         headerContainer.classList.add("header-container");
 
         const headerLogo = document.createElement("img");
+        headerLogo.classList.add("home")
         headerLogo.src = "/assets/logo.png";
+        
+        headerLogo.addEventListener("click", () => {
+          location.reload();
+        })
+
 
         const options = [
             { name: "Inicio", href: "#" },
